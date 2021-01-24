@@ -15,8 +15,7 @@
  */
 package com.jagrosh.jmusicbot.gui;
 
-import java.awt.Dimension;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.io.PrintStream;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -34,6 +33,7 @@ public class ConsolePanel extends JPanel {
         JTextArea text = new JTextArea();
         text.setLineWrap(true);
         text.setWrapStyleWord(true);
+        text.setFont(Font.getFont(Font.SERIF));
         text.setEditable(false);
         PrintStream con=new PrintStream(new TextAreaOutputStream(text));
         System.setOut(con);
